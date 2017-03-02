@@ -1,33 +1,35 @@
   <div *ngIf="crime">
-  	<h2>{{crime.nome_vitima}} details!</h2>
-  	<div><label>id: </label>{{crime.id}}</div>
-  	<div>
-  		<label>name: </label>
-    	<input [(ngModel)] = "crime.nome_vitima" placeholder = "name">
-    	<br>
-    	<label>cidade: </label>
-    	<input [(ngModel)] = "crime.cidade" placeholder = "cidade">
-    	<br>
-    	<label>data: </label>
-    	<input [(ngModel)] = "crime.data" placeholder = "data">
-    	<br>
-    	<label>arma do crime: </label>
-    	<input [(ngModel)] = "crime.objeto_utilizado" placeholder = "arma do crime">
-    	<br>
-    	<label>idade da vítima: </label>
-    	<input [(ngModel)] = "crime.idade" placeholder = "idade da vítima">
-    	<br>
-    	<label>quantidade de vítimas: </label>
-    	<input [(ngModel)] = "crime.qtd_vitimas" placeholder = "quantidade de vitias">
-    	<br>
-    	<label>sexo da vítima: </label>
-    	<input [(ngModel)] = "crime.sexo" placeholder = "sexo da vítima">
-    	<br>
-    	<label>tipo de crime: </label>
-    	<input [(ngModel)] = "crime.tipo_crime" placeholder = "tipo de crime">
-    	<br>
-    	<label>status: </label>
-    	<input [(ngModel)] = "crime.status" placeholder = "status">
-  	</div>
-    <button class="btn btn-default" (click) = "goBack()">Back</button> 
-  </div>`
+    <h4>{{crime.nome_vitima}}</h4>
+  	<div class="col-sm-4 input-group-sm text-right">
+      <div><label>id: </label>{{crime.id}}</div>
+  		<label class="control-label" for="nome_vitima">Nome: </label>
+    	<input class="form-control" name="nome_vitima" id="nome_vitima" [(ngModel)] = "crime.nome_vitima">
+    	
+      <label class="control-label" for="cidade">Cidade: </label>
+    	<input class="form-control" name="cidade" id="cidade" [(ngModel)] = "crime.cidade">
+    	
+      <label class="control-label" for="data">Data da Ocorrência: </label>
+    	<input class="form-control" name="data" id="data" [(ngModel)] = "crime.data">
+    	
+      <label class="control-label" for="arma">Arma do Crime: </label>
+    	<input class="form-control" name="arma" id="arma"[(ngModel)] = "crime.objeto_utilizado">
+    	
+    	<label class="control-label" for="idade">Idade da Vítima: </label>
+    	<input class="form-control" name="idade" id="idade" [(ngModel)] = "crime.idade">
+    	
+    	<label class="control-label" for="vitimas">Quantidade de Vítimas: </label>
+    	<input class="form-control" name="vitimas" id="vitimas" [(ngModel)] = "crime.qtd_vitimas">
+    	
+    	<label class="control-label" for="sexo">Sexo: </label>
+    	<input class="form-control" name="sexo" id="sexo"[(ngModel)] = "crime.sexo">
+    	
+    	<label class="control-label" for="tipo_crime">tipo de crime: </label>
+    	<input class="form-control" name="tipo_crime" id="tipo_crime" [(ngModel)] = "crime.tipo_crime">
+    	
+    	<label class="control-label" for="status">status: </label>
+    	<input class="form-control" name="status" id="status" [(ngModel)] = "crime.status">
+      
+      <br>
+      <button class=" btn btn-primary" (click) = "goBack()">Voltar</button>  
+    </div>
+  </div>  

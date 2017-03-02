@@ -11,16 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Acervo de denúncias';
+        this.title = 'Acervo de Denúncias';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n\t<h1>{{title}}</h1>\n\t<nav>\n\t\t<a routerLink = \"/dashboard\">Dashboard</a>\n\t\t<a routerLink = \"/crimes\">crimes</a>\n\t</nav> \n\t<router-outlet></router-outlet>"
+            template: "\n\t<div class=\"page-header text-center\"><h3>{{title}}</h3></div>\n\t<ul class=\"nav nav-pills\">\n  \t\t<li role=\"presentation\"><a routerLink = \"/dashboard\">Dashboard</a></li>\n  \t\t<li role=\"presentation\"><a routerLink = \"/crimes\">Crimes</a></li>\n\t</ul>\n\t<router-outlet></router-outlet>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+/*<h1>{{title}}</h1>
+    <nav class="">
+        <a routerLink = "/dashboard">Dashboard</a>
+        <a routerLink = "/crimes">crimes</a>
+    </nav> */ 
 //# sourceMappingURL=app.component.js.map
