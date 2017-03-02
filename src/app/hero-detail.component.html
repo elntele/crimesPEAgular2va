@@ -1,0 +1,33 @@
+  <div *ngIf="hero">
+  	<h2>{{hero.nome_vitima}} details!</h2>
+  	<div><label>id: </label>{{hero.id}}</div>
+  	<div>
+  		<label>name: </label>
+    	<input [(ngModel)] = "hero.nome_vitima" placeholder = "name">
+    	<br>
+    	<label>cidade: </label>
+    	<input [(ngModel)] = "hero.cidade" placeholder = "cidade">
+    	<br>
+    	<label>data: </label>
+    	<input [(ngModel)] = "hero.data" placeholder = "data">
+    	<br>
+    	<label>arma do crime: </label>
+    	<input [(ngModel)] = "hero.objeto_utilizado" placeholder = "arma do crime">
+    	<br>
+    	<label>idade da vítima: </label>
+    	<input [(ngModel)] = "hero.idade" placeholder = "idade da vítima">
+    	<br>
+    	<label>quantidade de vítimas: </label>
+    	<input [(ngModel)] = "hero.qtd_vitimas" placeholder = "quantidade de vitias">
+    	<br>
+    	<label>sexo da vítima: </label>
+    	<input [(ngModel)] = "hero.sexo" placeholder = "sexo da vítima">
+    	<br>
+    	<label>tipo de crime: </label>
+    	<input [(ngModel)] = "hero.tipo_crime" placeholder = "tipo de crime">
+    	<br>
+    	<label>status: </label>
+    	<input [(ngModel)] = "hero.status" placeholder = "status">
+  	</div>
+    <button class="btn btn-default" (click) = "goBack()">Back</button> 
+  </div>`
