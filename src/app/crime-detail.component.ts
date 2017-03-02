@@ -1,24 +1,24 @@
 import { Component, Input, OnInit } from '@angular/core';
-import{ Hero } from'./hero';
+import{ Crime } from'./crime';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
-import { HeroService } from './hero.service';
+import { CrimeService } from './crime.service';
 import 'rxjs/add/operator/switchMap';
 
 @Component(  {
   moduleId: module.id,
-  selector: 'my-hero-detail',
-  templateUrl: 'hero-detail.component.html'
+  selector: 'my-crime-detail',
+  templateUrl: 'crime-detail.component.html'
 
 })
 
-export class HeroDetailComponent implements OnInit{
+export class CrimeDetailComponent implements OnInit{
 	@Input()
-  hero: Hero;
+  crime: Crime;
 
   constructor(
 
-    private heroService: HeroService,
+    private crimeService: CrimeService,
     private route: ActivatedRoute,
     private location: Location
 
@@ -27,8 +27,8 @@ export class HeroDetailComponent implements OnInit{
   ngOnInit(): void{
 
     this.route.params
-    .switchMap((params: Params) => this.heroService.getHero(+params['id']))
-    .subscribe(hero => this.hero = hero);
+    .switchMap((params: Params) => this.crimeService.getCrime(+params['id']))
+    .subscribe(hero => this.crime = hero);
   }
 
   goBack(): void{

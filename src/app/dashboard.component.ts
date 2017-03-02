@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
+import { Crime } from './crime';
+import { CrimeService } from './crime.service';
 
 @Component ({
 	moduleId: module.id,
@@ -10,12 +10,12 @@ import { HeroService } from './hero.service';
 
 export class DashboardComponent implements OnInit{
 
-	heroes: Hero[] = [];
+	Crimes: Crime[] = [];
 
-	constructor (private heroService: HeroService) {}
+	constructor (private heroService: CrimeService) {}
 
 	ngOnInit(): void {
 
-		this.heroService.getHeroes().then(heroes => this.heroes = heroes.slice(1, 5));
+		this.heroService.getCrimes().then(crimes => this.Crimes = crimes.slice(1, 15));
 	}
 }

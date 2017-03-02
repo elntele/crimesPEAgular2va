@@ -12,9 +12,9 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
-var hero_detail_component_1 = require('./hero-detail.component');
-var heroes_component_1 = require('./heroes.component');
-var hero_service_1 = require('./hero.service');
+var crime_detail_component_1 = require('./crime-detail.component');
+var crimes_component_1 = require('./crimes.component');
+var crime_service_1 = require('./crime.service');
 var router_1 = require('@angular/router');
 var dashboard_component_1 = require('./dashboard.component');
 var AppModule = (function () {
@@ -32,8 +32,8 @@ var AppModule = (function () {
                         pathMatch: 'full'
                     },
                     {
-                        path: 'heroes',
-                        component: heroes_component_1.HeroesComponent
+                        path: 'crimes',
+                        component: crimes_component_1.CrimesComponent
                     },
                     {
                         path: 'dashboard',
@@ -41,18 +41,18 @@ var AppModule = (function () {
                     },
                     {
                         path: 'detail/:id',
-                        component: hero_detail_component_1.HeroDetailComponent
+                        component: crime_detail_component_1.CrimeDetailComponent
                     }
                 ])
             ],
             declarations: [
                 app_component_1.AppComponent,
-                hero_detail_component_1.HeroDetailComponent,
-                heroes_component_1.HeroesComponent,
+                crime_detail_component_1.CrimeDetailComponent,
+                crimes_component_1.CrimesComponent,
                 dashboard_component_1.DashboardComponent
             ],
             providers: [
-                hero_service_1.HeroService
+                crime_service_1.CrimeService
             ],
             bootstrap: [
                 app_component_1.AppComponent

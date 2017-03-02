@@ -1,5 +1,5 @@
 
-export class Hero{
+export class Crime{
 	id: number;
 	cidade: string;
 	data:string;

@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_heroes_1 = require('./mock-heroes');
-var HeroService = (function () {
-    function HeroService() {
+var lista_crimes_1 = require('./lista.crimes');
+var CrimeService = (function () {
+    function CrimeService() {
     }
-    HeroService.prototype.getHeroes = function () {
-        return Promise.resolve(mock_heroes_1.HEROES);
+    CrimeService.prototype.getCrimes = function () {
+        return Promise.resolve(lista_crimes_1.CRIMES);
     };
-    HeroService.prototype.getHero = function (id) {
-        return this.getHeroes().then(function (heroes) { return heroes.find(function (hero) { return hero.id === id; }); });
+    CrimeService.prototype.getCrime = function (id) {
+        return this.getCrimes().then(function (crimes) { return crimes.find(function (crime) { return crime.id === id; }); });
     };
-    HeroService = __decorate([
+    CrimeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], HeroService);
-    return HeroService;
+    ], CrimeService);
+    return CrimeService;
 }());
-exports.HeroService = HeroService;
-//# sourceMappingURL=hero.service.js.map
+exports.CrimeService = CrimeService;
+//# sourceMappingURL=crime.service.js.map

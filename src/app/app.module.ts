@@ -2,9 +2,9 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroService } from './hero.service';
+import { CrimeDetailComponent } from './crime-detail.component';
+import { CrimesComponent } from './crimes.component';
+import { CrimeService } from './crime.service';
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 
@@ -19,8 +19,8 @@ import { DashboardComponent } from './dashboard.component';
           pathMatch: 'full'
       },
       {
-        path: 'heroes',
-        component: HeroesComponent
+        path: 'crimes',
+        component: CrimesComponent
       },
       {
         path: 'dashboard',
@@ -28,19 +28,19 @@ import { DashboardComponent } from './dashboard.component';
       },
       {
         path: 'detail/:id',
-        component: HeroDetailComponent
+        component: CrimeDetailComponent
       }
 
     ])
   ],
   declarations: [ 
   	AppComponent, 
-  	HeroDetailComponent,
-  	HeroesComponent,
+  	CrimeDetailComponent,
+  	CrimesComponent,
     DashboardComponent 
   	],
   providers: [
-  	HeroService
+  	CrimeService
   ],	
   bootstrap: [ 
   	AppComponent 
